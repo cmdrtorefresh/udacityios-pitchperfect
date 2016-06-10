@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		220CAD841D0B5536006DE1CC /* PlaySoundsViewController+Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220CAD831D0B5536006DE1CC /* PlaySoundsViewController+Audio.swift */; };
 		2251FD191D08BC81004F49E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2251FD181D08BC81004F49E0 /* AppDelegate.swift */; };
 		2251FD1B1D08BC81004F49E0 /* RecordSoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2251FD1A1D08BC81004F49E0 /* RecordSoundsViewController.swift */; };
 		2251FD201D08BC81004F49E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2251FD1F1D08BC81004F49E0 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		220CAD831D0B5536006DE1CC /* PlaySoundsViewController+Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlaySoundsViewController+Audio.swift"; sourceTree = "<group>"; };
 		2251FD151D08BC81004F49E0 /* PitchPerfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitchPerfect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2251FD181D08BC81004F49E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2251FD1A1D08BC81004F49E0 /* RecordSoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSoundsViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 		2251FD171D08BC81004F49E0 /* PitchPerfect */ = {
 			isa = PBXGroup;
 			children = (
+				220CAD831D0B5536006DE1CC /* PlaySoundsViewController+Audio.swift */,
 				2251FD181D08BC81004F49E0 /* AppDelegate.swift */,
 				2251FD1A1D08BC81004F49E0 /* RecordSoundsViewController.swift */,
 				22D2CAE81D0A39D700B416A8 /* PlaySoundsViewController.swift */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2251FD1B1D08BC81004F49E0 /* RecordSoundsViewController.swift in Sources */,
+				220CAD841D0B5536006DE1CC /* PlaySoundsViewController+Audio.swift in Sources */,
 				22D2CAE91D0A39D700B416A8 /* PlaySoundsViewController.swift in Sources */,
 				2251FD191D08BC81004F49E0 /* AppDelegate.swift in Sources */,
 			);
