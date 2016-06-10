@@ -61,10 +61,24 @@ class PlaySoundsViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         configureUI(.NotPlaying)
-        duration = Double(round(100*getOriginalAudioDuration(recordedAudioURL)/100))
-        durationOutlet.text = String(duration) + " sec"
+        duration = getOriginalAudioDuration(recordedAudioURL)
+        let durationStringArray = doubleFigureFormatter(duration, noBehindDecimal: 3)
+        durationOutlet.text = durationStringArray[0] + durationStringArray[1] + " sec"
     }
 
+    func doubleFigureFormatter(number: Double, noBehindDecimal: Int) -> [String] {
+        let fullNumber = Double(Int(number))
+        let unformattedDecimal = number - fullNumber
+        let unformattedString = String(unformattedDecimal)
+        var formattedDecimal = ""
+        var index = 1
+        while index <= noBehindDecimal + 1 {
+            formattedDecimal += String(unformattedString[unformattedString.startIndex.advancedBy(index)])
+            index += 1
+        }
+        return [String(Int(number)) ,formattedDecimal]
+    }
+    
     func getOriginalAudioDuration(fileURL: NSURL) -> Double {
         var dur: Double = 0
         do {
