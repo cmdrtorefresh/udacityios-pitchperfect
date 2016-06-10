@@ -20,11 +20,13 @@ class PlaySoundsViewController: UIViewController {
     @IBOutlet weak var echoBtnOutlet: UIButton!
     @IBOutlet weak var reverbBtnOutlet: UIButton!
     @IBOutlet weak var stopBtnOutlet: UIButton!
+    @IBOutlet weak var durationOutlet: UILabel!
     
     var audioFile: AVAudioFile!
     var audioEngine: AVAudioEngine!
     var audioPlayerNode: AVAudioPlayerNode!
     var stopTimer: NSTimer!
+    var duration: Double!
     
     enum buttonType: Int { case Slow = 0, Fast, Chipmunk, Vader, Echo, Reverb }
     
@@ -59,8 +61,20 @@ class PlaySoundsViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         configureUI(.NotPlaying)
+        duration = Double(round(100*getOriginalAudioDuration(recordedAudioURL)/100))
+        durationOutlet.text = String(duration) + " sec"
     }
 
+    func getOriginalAudioDuration(fileURL: NSURL) -> Double {
+        var dur: Double = 0
+        do {
+            dur = try AVAudioPlayer(contentsOfURL: fileURL).duration
+        } catch {
+            showAlert(Alerts.AudioPlayerError, message: String(error))
+        }
+        return dur
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -80,18 +80,35 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Dr8-xZ-3df">
                                 <rect key="frame" x="20" y="64" width="560" height="536"/>
                                 <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xQw-qD-ZWm">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="107"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Original Recording Duration :" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8O-lQ-15s">
+                                                <rect key="frame" x="0.0" y="0.0" width="275" height="107"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHp-gt-gAB">
+                                                <rect key="frame" x="285" y="0.0" width="275" height="107"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="KmL-48-w53">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="134"/>
+                                        <rect key="frame" x="0.0" y="107" width="560" height="107"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKY-uE-Kmm">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="134"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="107"/>
                                                 <state key="normal" image="snailButton"/>
                                                 <connections>
                                                     <action selector="playSoundForButton:" destination="xso-CT-lHr" eventType="touchUpInside" id="RF7-aA-grW"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWa-vG-Uhc">
-                                                <rect key="frame" x="280" y="0.0" width="280" height="134"/>
+                                                <rect key="frame" x="280" y="0.0" width="280" height="107"/>
                                                 <state key="normal" image="rabbitButton"/>
                                                 <connections>
                                                     <action selector="playSoundForButton:" destination="xso-CT-lHr" eventType="touchUpInside" id="r0F-lq-M3l"/>
@@ -100,17 +117,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Ost-hz-tgP">
-                                        <rect key="frame" x="0.0" y="134" width="560" height="134"/>
+                                        <rect key="frame" x="0.0" y="214" width="560" height="108"/>
                                         <subviews>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNp-xE-7Lo">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="134"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="108"/>
                                                 <state key="normal" image="chipmunkButton"/>
                                                 <connections>
                                                     <action selector="playSoundForButton:" destination="xso-CT-lHr" eventType="touchUpInside" id="9AG-FZ-Alc"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3BV-Ak-g0h">
-                                                <rect key="frame" x="280" y="0.0" width="280" height="134"/>
+                                                <rect key="frame" x="280" y="0.0" width="280" height="108"/>
                                                 <state key="normal" image="darthVaderButton"/>
                                                 <connections>
                                                     <action selector="playSoundForButton:" destination="xso-CT-lHr" eventType="touchUpInside" id="jvI-st-T1a"/>
@@ -119,17 +136,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="X4a-z9-76m">
-                                        <rect key="frame" x="0.0" y="268" width="560" height="134"/>
+                                        <rect key="frame" x="0.0" y="322" width="560" height="107"/>
                                         <subviews>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IL2-jn-vFl">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="134"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="107"/>
                                                 <state key="normal" image="echoButton"/>
                                                 <connections>
                                                     <action selector="playSoundForButton:" destination="xso-CT-lHr" eventType="touchUpInside" id="hAZ-Vg-3Qr"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCc-TI-Lz2">
-                                                <rect key="frame" x="280" y="0.0" width="280" height="134"/>
+                                                <rect key="frame" x="280" y="0.0" width="280" height="107"/>
                                                 <state key="normal" image="reverbButton"/>
                                                 <connections>
                                                     <action selector="playSoundForButton:" destination="xso-CT-lHr" eventType="touchUpInside" id="PEN-Nb-fk9"/>
@@ -138,7 +155,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGv-ZQ-cBr">
-                                        <rect key="frame" x="0.0" y="402" width="560" height="134"/>
+                                        <rect key="frame" x="0.0" y="429" width="560" height="107"/>
                                         <state key="normal" image="stopRecordButton"/>
                                         <connections>
                                             <action selector="stopButtonPressed:" destination="xso-CT-lHr" eventType="touchUpInside" id="bPd-OT-WZl"/>
@@ -158,6 +175,7 @@
                     <connections>
                         <outlet property="chipmunkBtnOutlet" destination="pNp-xE-7Lo" id="Obr-Ij-nik"/>
                         <outlet property="darthVaderBtnOutlet" destination="3BV-Ak-g0h" id="j52-A7-OvT"/>
+                        <outlet property="durationOutlet" destination="PHp-gt-gAB" id="Dhs-tH-Id0"/>
                         <outlet property="echoBtnOutlet" destination="IL2-jn-vFl" id="jNE-5Z-IPI"/>
                         <outlet property="rabbitBtnOutlet" destination="UWa-vG-Uhc" id="aRF-CC-2iQ"/>
                         <outlet property="reverbBtnOutlet" destination="wCc-TI-Lz2" id="3JG-BQ-BPm"/>

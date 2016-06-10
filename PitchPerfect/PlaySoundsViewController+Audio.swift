@@ -19,6 +19,7 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
         static let AudioRecordingError = "Audio Recording Error"
         static let AudioFileError = "Audio File Error"
         static let AudioEngineError = "Audio Engine Error"
+        static let AudioPlayerError = "Audio Player Error"
     }
     
     // raw values correspond to sender tags
