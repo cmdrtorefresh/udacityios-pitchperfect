@@ -18,10 +18,9 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     var audioRecorder: AVAudioRecorder!
     
     @IBAction func recordBtnAction(sender: AnyObject) {
-        recordBtnOutlet.enabled = false
-        stopRecordBtnOutlet.enabled = true
-        recordingLabel.text = "Recording in progress"
         
+        configureView(isRecording: true)
+
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
         
         let recordingName = "recordedVoice.wav"
@@ -38,11 +37,14 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         audioRecorder.record()
     }
     
+    func configureView(isRecording recording: Bool) {
+        recordBtnOutlet.enabled = !recording
+        stopRecordBtnOutlet.enabled = recording
+        recordingLabel.text = recording ? "Recording In Progress" : "Tap To Record"
+     }
+    
     @IBAction func stopRecordBtnAction(sender: AnyObject) {
-        recordBtnOutlet.enabled = true
-        stopRecordBtnOutlet.enabled = false
-        recordingLabel.text = "Tap To Record"
-        
+        configureView(isRecording: false)
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)
@@ -64,21 +66,10 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
     
     override func viewWillAppear(animated: Bool) {
         stopRecordBtnOutlet.enabled = false
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
