@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "darthvader_300.png",
+      "filename" : "darthvader_100.png",
       "scale" : "1x"
     },
     {
@@ -12,7 +12,7 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "darthvader_100.png",
+      "filename" : "darthvader_300.png",
       "scale" : "3x"
     }
   ],
